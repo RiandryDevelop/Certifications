@@ -118,6 +118,9 @@ img {
 .card__image--Certification_Responsive_Web_Design {
   background-image: url(./certifications-imgs/responsive-design-web.png);
 }
+.card__image--Certification_DataVisualization {
+  background-image: url(./certifications-imgs/Data-visualization-FCC.png);
+}
 .card__title {
   color: #696969;
   font-size: 1.25rem;

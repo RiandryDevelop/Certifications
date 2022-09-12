@@ -2,7 +2,8 @@
 const $button_1 = document.getElementById("certification_1"),
   $button_2 = document.getElementById("certification_2"),
   $button_3 = document.getElementById("certification_3"),
-  $button_4 = document.getElementById("certification_4");
+  $button_4 = document.getElementById("certification_4"),
+  $button_5 = document.getElementById("certification_3");
 
 // now we adding a event to the button and open it the respectivy page
 
@@ -23,5 +24,10 @@ $button_3.addEventListener("click", () => {
   );
 });
 $button_4.addEventListener("click", () => {
+  window.open(
+    "https://www.freecodecamp.org/certification/RiandryConnor/data-visualization"
+  );
+});
+$button_5.addEventListener("click", () => {
   window.open("#");
 });
