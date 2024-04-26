@@ -107,20 +107,26 @@ img {
   }
 }
 .card__image--Certification_Backend {
-  background-image: url(./certifications-imgs/white-image.jpg);
+  background-image: url(./certifications-imgs/Backend-Development-and-APIS.png); 
 }
 .card__image--Certification_Javascript {
-  background-image: url(./certifications-imgs/JavaScript\ Algorithms\ and\ Data\ Structures.png);
+  background-image: url(./certifications-imgs/JavaScript-Algorithms-and-Data-Structures\(Legacy\).png);
 }
+
+.card__image--Certification_Javascript_beta {
+  background-image: url(./certifications-imgs/JavaScript-Algorithms-and-Data-Structures.png);
+}
+
 .card__image--Certification_Frontend {
-  background-image: url(./certifications-imgs/FrontEnd-Development-libraries.png);
+  background-image: url(./certifications-imgs/Frontend-Development-Libraries.png);
 }
 .card__image--Certification_Responsive_Web_Design {
-  background-image: url(./certifications-imgs/responsive-design-web.png);
+  background-image: url(./certifications-imgs/Responsive-Web-Design.png);
 }
 .card__image--Certification_DataVisualization {
-  background-image: url(./certifications-imgs/Data-visualization-FCC.png);
+  background-image: url(./certifications-imgs/Data-Visualization.png);
 }
+
 .card__title {
   color: #696969;
   font-size: 1.25rem;
