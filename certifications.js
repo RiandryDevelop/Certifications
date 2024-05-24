@@ -1,37 +1,42 @@
-// Get all the button
-const $button_1 = document.getElementById("certification_1"),
-  $button_2 = document.getElementById("certification_2"),
-  $button_3 = document.getElementById("certification_3"),
-  $button_4 = document.getElementById("certification_4"),
-  $button_5 = document.getElementById("certification_5"),
-  $button_6 = document.getElementById("certification_6");
-// now we adding a event to the button and open it the respectivy page
+document.addEventListener("DOMContentLoaded", function() {
+  let zindex = 10;
+  let cards = document.querySelectorAll("div.card");
+  let cardsContainer = document.querySelector("div.cards");
 
-$button_1.addEventListener("click", () => {
-  window.open(
-    "https://www.freecodecamp.org/certification/RiandryConnor/responsive-web-design"
-  );
-});
+  console.log(cards);
+  cards.forEach(function(card) {
+    card.addEventListener("click", function(event) {
+      event.preventDefault();
 
-$button_2.addEventListener("click", () => {
-  window.open(
-    "https://www.freecodecamp.org/certification/RiandryConnor/javascript-algorithms-and-data-structures-v8"
-  );
-});
-$button_3.addEventListener("click", () => {
-  window.open(
-    "https://www.freecodecamp.org/certification/RiandryConnor/front-end-development-libraries"
-  );
-});
-$button_4.addEventListener("click", () => {
-  window.open(
-    "https://www.freecodecamp.org/certification/RiandryConnor/data-visualization"
-  );
-});
-$button_5.addEventListener("click", () => {
-  window.open("https://www.freecodecamp.org/certification/RiandryConnor/back-end-development-and-apis");
-});
+      let isShowing = false;
 
-$button_6.addEventListener("click", () => {
-  window.open("https://www.freecodecamp.org/certification/RiandryConnor/javascript-algorithms-and-data-structures");
+      if (this.classList.contains("show")) {
+        isShowing = true;
+      }
+
+      if (cardsContainer.classList.contains("showing")) {
+        
+        let showingCard = document.querySelector("div.card.show");
+        showingCard.classList.remove("show");
+
+        if (isShowing) {
+        
+          cardsContainer.classList.remove("showing");
+        } else {
+        
+          this.style.zIndex = zindex;
+          this.classList.add("show");
+        }
+
+        zindex++;
+      } else {
+        
+        cardsContainer.classList.add("showing");
+        this.style.zIndex = zindex;
+        this.classList.add("show");
+
+        zindex++;
+      }
+    });
+  });
 });
